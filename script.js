@@ -83,3 +83,4 @@ function addBookmarks() {
         bookmarksList.appendChild(bookmarkDiv);
     });
 }
+ renderBookmarks();
