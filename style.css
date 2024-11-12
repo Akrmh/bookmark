@@ -14,28 +14,23 @@ body {
 }
 
 .container {
-    width: 30vw;
+    width: 40%;
     padding: 20px;
     background: white;
     box-shadow: 0 4px 8px #00000033;
-    border-radius: 8px;
+    border-radius: 10px;
     text-align: center;
     margin: 30px 0 0 0;
 }
 
 h1 {
-    margin-top: 0;
     color: #08c0d8;
-}
-
-.form {
-    margin-bottom: 20px;
 }
 
 .form input {
     padding: 10px;
     margin: 5px;
-    width: calc(100% - 22px);
+    width: 90%;
     outline: none;
     border-radius: 10px;
     border: 2px solid #08c0d8;
@@ -58,21 +53,22 @@ button {
     background-color: #4CAF50;
     color: #ffffff;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     padding: 10px;
     margin: 5px;
-    width: 18vw;
+    width: 50%;
 }
 
 .bookmark {
     display: flex;
     flex-direction: column;
     text-align: center;
+    color: #474444;
     padding: 10px;
     background: #ffffff;
     border-bottom: 1px solid #ddd;
     border-radius: 10px;
-    margin: 10px 10px;
+    margin: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px #00000033;
 }
@@ -80,6 +76,16 @@ button {
 .bookmark div {
     display: flex;
     justify-content: space-between;
+}
+
+.bookmark a{
+    text-decoration: none;
+}
+
+.bookmark a:hover{
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 1.1rem;
 }
 
 .bookmark button {
@@ -90,7 +96,7 @@ button {
     background-color: #ff5722;
     color: #ffffff;
     border: none;
-    border-radius: 4px;
+    border-radius: 7px;
 }
 
 .bookmark button.edit {
@@ -124,7 +130,7 @@ button {
 
 @media (max-width: 768px) {
     .container {
-        width: 60%; 
+        width: 80%; 
         padding: 15px;
     }
 
@@ -151,8 +157,12 @@ button {
         width: 100%; 
     }
 
-    button, .form input {
-        width: 100%; 
+    .form input {
+        width: 90%; 
+    }
+
+    .form button{
+        width: 40%;
     }
 
     h1 {

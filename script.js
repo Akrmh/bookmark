@@ -1,9 +1,9 @@
 
 
 const addBookmarkButton = document.getElementById('addBookmarkButton');
-let bookmarks = JSON.parse(localStorage.getItem('bookmarks')) ; 
+let bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [] ; 
 
-renderBookmarks();
+addBookmarks();
 
 addBookmarkButton.addEventListener('click', (e) => {
     e.preventDefault();
@@ -39,7 +39,7 @@ addBookmarkButton.addEventListener('click', (e) => {
     document.getElementById('websiteName').value = '';
     document.getElementById('websiteURL').value = '';
 
-    renderBookmarks();
+    addBookmarks();
 });
 
 function deleteBookmark(index) {
@@ -47,7 +47,7 @@ function deleteBookmark(index) {
 
     localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
 
-    renderBookmarks();
+    addBookmarks();
 }
 
 function editBookmark(index) {
@@ -59,11 +59,11 @@ function editBookmark(index) {
 
         localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
 
-        renderBookmarks();
+        addBookmarks();
     }
 }
 
-function renderBookmarks() {
+function addBookmarks() {
     const bookmarksList = document.getElementById('bookmarksList');
     bookmarksList.innerHTML = '';
 
